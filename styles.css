@@ -1,0 +1,193 @@
+
+body{
+  margin: 0;
+  
+}
+h1, h2, p{
+  margin: 0;
+}
+
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+img{
+  vertical-align: bottom;
+}
+.container{
+  width: calc(100% - 8px);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.up{
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  font-size: 32px;
+}
+.up:hover{
+  opacity: .4;
+}
+
+/* header */
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  max-width: 1200px;
+}
+
+header nav ul{
+  display: flex;
+} 
+
+header nav li{
+  font-size: 24px;
+}
+
+header nav li + li{
+  margin-left: 8px;
+}
+
+header form{
+  display: none;
+}
+
+header form input {
+  all: unset;
+  border-bottom: 1px solid black;
+  width: 300px;
+}
+
+header form button{
+  all: unset;
+  cursor: pointer;
+}
+
+header form button:active{
+  opacity: 0.2;
+  transition: opacity .7s;
+}
+
+/* .hero */
+
+.hero{
+  width: 200px;
+   height: 220px;
+   margin-top: 30px;
+  }
+
+  .hero img{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+     transform: translateY(-18px);
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.hero img.current{
+  opacity: 1;
+
+}
+
+
+.products{
+  margin-top: 120px;
+}
+
+.products h1{
+  margin-bottom: 20px;
+}
+.products ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.products li{
+  width: calc((100% - 16px) / 2);
+}
+
+.products li img{
+  width: 100%;
+}
+.products h2{
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.products a{
+  display: block;
+}
+
+.items{
+   opacity: 0;
+   transform: translateY(80px);
+   transition: opacity .6s , transform .6s;
+}
+.items.appear{
+  opacity: 1;
+  transform: none;
+}
+
+.more{
+  display: block;
+  width: 260px;
+  margin: 40px auto 80px ;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 8px 0; 
+}
+
+.more:hover{
+  opacity: .4;
+}
+
+/* footer */
+
+footer{
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 8px;
+}
+
+footer small{
+   font-size: 18px;
+}
+
+footer div{
+  font-size: 18px;
+}
+
+footer div i + i{
+  margin-left: 10px;
+}
+
+/* large */
+@media (min-width: 600px){
+ .products li{
+  width: calc((100% - 32px) / 3);
+ } 
+}
+@media (min-width: 700px){
+ header form{
+  display: block
+ }
+};
